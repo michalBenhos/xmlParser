@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.IO;
 
 namespace parseXmlFiles
 {
@@ -12,10 +14,18 @@ namespace parseXmlFiles
         /// </summary>
         static void Main()
         {
-            string path = @"ParseXML";
-            List<LabConfigData> labConfigDatas = XMLParser.ParseDirectory(path);
-            DataPrinter dataPrinter = new();
-            dataPrinter.PrintData(labConfigDatas);
+            Console.WriteLine("Enter directory path: ");
+            string? path = Console.ReadLine();
+            if (path != null && Directory.Exists(path))
+            {
+                List<LabConfigData> labConfigDatas = XMLParser.ParseDirectory(path);
+                DataPrinter dataPrinter = new();
+                dataPrinter.PrintData(labConfigDatas);
+            }
+            else
+            {
+                Console.WriteLine("Invalid directory path");
+            }
         }
     }
 }
