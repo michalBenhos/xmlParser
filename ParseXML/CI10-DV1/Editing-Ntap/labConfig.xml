@@ -1,0 +1,86 @@
+﻿<?xml version="1.0"?>
+<config testName="Config">
+	
+	<idu id="0">
+		<name>CI10-DV1</name>
+	</idu>
+
+  <svnFolders>
+    <svnUpdate>C:\AutomaticTester\Tests\Editing_new\GUI\Netapp</svnUpdate>
+    <svnUpdate>C:\AutomaticTester\Masters\Default\Editing_new\GUI\NetApp-NEW</svnUpdate>
+    <svnUpdate>C:\AutomaticTester\Tests\Editing\GUI\Netapp</svnUpdate>
+    <svnUpdate>C:\AutomaticTester\Masters\Default\Editing\GUI\NetApp</svnUpdate>
+    <svnUpdate>C:\UIAutomation</svnUpdate>
+  </svnFolders>
+	
+	<configPlugins>
+		<pluginAfterConfig>
+			<name>DisableDaJobs</name>
+			<enabled>1</enabled>
+		</pluginAfterConfig>
+	</configPlugins>
+	
+	<domain id="1">
+		 <enabled>1</enabled>
+		 <type>AD</type>
+		 <name>CI10.com</name>
+		 <domainAdminUserName>CI10\administrator</domainAdminUserName>
+		 <domainAdminUserPass>p@ssword1</domainAdminUserPass>
+	</domain>
+
+  <filer id="5"><!-- Not exist anymore : enabled =0 -->
+		<enabled>0</enabled>
+		<name>CI10-NTAP</name> <!-- 10.10.85.107  -->
+		<type>NTAPP</type>
+		<volume>	
+			<ntappShare>
+				<name>C$</name>
+				<enabled>1</enabled>
+				<monitored>2</monitored> <!-- crawling method:0 disabled, 1 NTFS, 2 NFS, 3 = 1+2 -->
+			</ntappShare>
+			<ntappShare>
+				<name>D$</name>
+				<enabled>1</enabled>
+				<monitored>1</monitored> <!-- crawling method:0 disabled, 1 NTFS, 2 NFS, 3 = 1+2 -->
+			</ntappShare>
+			<ntappShare>
+				<name>E$</name>
+				<enabled>1</enabled>
+				<monitored>3</monitored> <!-- crawling method:0 disabled, 1 NTFS, 2 NFS, 3 = 1+2 -->
+			</ntappShare>
+		</volume>
+		<collectorname></collectorname>
+		<shareUserName>CI10\administrator</shareUserName>
+		<shareUserPass>p@ssword1</shareUserPass>
+	</filer>
+
+  <filer id="6">
+    <enabled>1</enabled>
+    <name>CI10-NTAP81</name><!-- 10.10.85.105  -->
+    <type>NTAPP</type>
+    <volume>
+      <ntappShare>
+        <name>C$</name>
+        <enabled>1</enabled>
+        <monitored>2</monitored>
+        <!-- crawling method:0 disabled, 1 NTFS, 2 NFS, 3 = 1+2 -->
+      </ntappShare>
+      <ntappShare>
+        <name>D$</name>
+        <enabled>1</enabled>
+        <monitored>1</monitored>
+        <!-- crawling method:0 disabled, 1 NTFS, 2 NFS, 3 = 1+2 -->
+      </ntappShare>
+      <ntappShare>
+        <name>E$</name>
+        <enabled>1</enabled>
+        <monitored>3</monitored>
+        <!-- crawling method:0 disabled, 1 NTFS, 2 NFS, 3 = 1+2 -->
+      </ntappShare>
+    </volume>
+    <collectorname></collectorname>
+    <shareUserName>CI10\administrator</shareUserName>
+    <shareUserPass>p@ssword1</shareUserPass>
+  </filer>
+	
+</config>

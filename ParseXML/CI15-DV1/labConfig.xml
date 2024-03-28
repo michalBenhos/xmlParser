@@ -1,0 +1,54 @@
+﻿<?xml version="1.0"?>
+<config testName="Config">
+
+	<idu id="0">
+		<name>CI15-DV1</name>
+	</idu>
+	
+	<svnFolders>
+		<svnUpdate>C:\AutomaticTester\Tests\Editing\Scripts</svnUpdate>
+		<svnUpdate>C:\AutomaticTester\Tests\Editing_new\Scripts</svnUpdate>
+		<svnUpdate>C:\AutomaticTester\Tests\Synchronization</svnUpdate>
+		<svnUpdate>C:\AutomaticTester\Tests\Editing\GUI\Domain Relations</svnUpdate>
+		<svnUpdate>C:\AutomaticTester\Tests\Editing_new\GUI\Domain Relations</svnUpdate>
+		<svnUpdate>C:\AutomaticTester\Tests\Commit_New</svnUpdate>
+		<svnUpdate>C:\AutomaticTester\Masters\Default\Commit</svnUpdate>
+		<svnUpdate>C:\UIAutomation</svnUpdate>
+		<svnUpdate>C:\AutomaticTester\Tests\Commit</svnUpdate>
+	</svnFolders>
+	
+	<configPlugins>
+		<pluginAfterConfig>
+			<name>DisableDaJobs</name>
+			<enabled>1</enabled>
+		</pluginAfterConfig>
+	</configPlugins>
+	
+	<domain id="1">
+		 <enabled>1</enabled>
+		 <type>AD</type>
+		 <name>CI15.com</name>
+		 <domainAdminUserName>CI15\administrator</domainAdminUserName>
+		 <domainAdminUserPass>p@ssword1</domainAdminUserPass>
+	</domain>
+	 
+	<filer id="2">
+		<enabled>1</enabled>
+		<name>CI15-Filer2K8</name>
+		<type>WIN</type>
+		<volume>C$</volume>
+		<collectorname></collectorname>
+		<shareUserName>CI15\administrator</shareUserName>
+		<shareUserPass>p@ssword1</shareUserPass>
+		<filerOptions>
+            <filerConfig>
+                <enabled>1</enabled>
+                <type>All</type>
+                <name>CollectLocalAccountsInfo</name>
+                <value>$true</value>
+            </filerConfig>
+        </filerOptions>
+
+	</filer>
+	
+</config>

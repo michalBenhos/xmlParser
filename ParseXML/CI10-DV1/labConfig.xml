@@ -1,0 +1,130 @@
+﻿<?xml version="1.0"?>
+<config testName="Config">
+
+	<idu id="0">
+		<name>CI10-DV1</name>
+	</idu>
+	
+	<svnFolders>
+		<svnUpdate>C:\AutomaticTester\Tests\Editing\GUI\Cellera</svnUpdate>
+		<svnUpdate>C:\AutomaticTester\Tests\Editing_new\GUI\Cellera</svnUpdate>
+		<svnUpdate>C:\AutomaticTester\Tests\Editing\GUI\Netapp</svnUpdate>
+		<svnUpdate>C:\AutomaticTester\Tests\Editing_new\GUI\Netapp</svnUpdate>
+		<svnUpdate>C:\AutomaticTester\Masters\Default\Editing\GUI</svnUpdate>
+		<svnUpdate>C:\AutomaticTester\Masters\Default\Editing_new\GUI</svnUpdate>
+		<svnUpdate>C:\UIAutomation</svnUpdate>
+	</svnFolders>
+	
+	<configPlugins>
+		<pluginAfterConfig>
+			<name>DisableDaJobs</name>
+			<enabled>1</enabled>
+		</pluginAfterConfig>
+	</configPlugins>
+	
+	<domain id="1">
+		 <enabled>1</enabled>
+		 <type>AD</type>
+		 <name>CI10.com</name>
+		 <domainAdminUserName>CI10\administrator</domainAdminUserName>
+		 <domainAdminUserPass>p@ssword1</domainAdminUserPass>
+	</domain>
+
+	<domain id="2">
+		 <enabled>0</enabled>
+		 <type>LDAP</type>
+		 <name>10.10.30.9</name>
+		 <domainAdminUserName>cn=admin,DC=qa-ldap,DC=varonis,DC=com</domainAdminUserName>
+		 <domainAdminUserPass>p@ssword</domainAdminUserPass>
+		 <!-- ldap options -->
+		 <fqdn>qa-ldap.varonis.com</fqdn>
+		 <port>389</port>
+		 <baseDn>DC=qa-ldap,DC=varonis,DC=com</baseDn>
+	</domain>
+	 
+	<filer id="3">
+		<enabled>0</enabled>
+		<name>CI10-Filer2K8</name>
+		<type>WIN</type>
+		<volume>C$</volume>
+		<collectorname></collectorname>
+		<shareUserName>CI10\administrator</shareUserName>
+		<shareUserPass>p@ssword1</shareUserPass>
+	</filer>
+	
+	<filer id="4">
+		<enabled>0</enabled>
+		<name>10.10.85.106</name>
+		<type>UNIX</type>
+		<volume>
+			<mount><path>/qa_mnt/lofi1</path></mount>
+		</volume>
+		<collectorname></collectorname>
+		<shareUserName>root</shareUserName>
+		<shareUserPass>p@ssword</shareUserPass>
+		<affilatedUserRepo>qa-ldap.varonis.com</affilatedUserRepo>
+	</filer>
+	
+	<filer id="4">
+		<enabled>0</enabled>
+		<name>10.10.85.108</name> 
+		<type>EMC</type>
+		<volume>NT</volume>
+		<collectorname></collectorname>
+		<shareUserName>CI10\administrator</shareUserName>
+		<shareUserPass>p@ssword1</shareUserPass>
+	</filer>
+	
+  <filer id="5"> <!-- Not exist anymore : enabled =0 -->
+		<enabled>0</enabled>
+		<name>CI10-NTAP</name> <!-- 10.10.85.107  -->
+		<type>NTAPP</type>
+		<volume>	
+			<ntappShare>
+				<name>C$</name>
+				<enabled>1</enabled>
+				<monitored>2</monitored> <!-- crawling method:0 disabled, 1 NFS, 2 NTFS, 3 = 1+2 -->
+			</ntappShare>
+			<ntappShare>
+				<name>D$</name>
+				<enabled>1</enabled>
+				<monitored>1</monitored> <!-- crawling method:0 disabled, 1 NFS, 2 NTFS, 3 = 1+2 -->
+			</ntappShare>
+			<ntappShare>
+				<name>E$</name>
+				<enabled>1</enabled>
+				<monitored>3</monitored> <!-- crawling method:0 disabled, 1 NFS, 2 NTFS, 3 = 1+2 -->
+			</ntappShare>
+		</volume>
+		<collectorname></collectorname>
+		<shareUserName>CI10\administrator</shareUserName>
+		<shareUserPass>p@ssword1</shareUserPass>
+	</filer>
+
+  <filer id="6">
+    <enabled>1</enabled>
+    <name>CI10-NTAP81</name> <!-- 10.10.85.105  -->
+    <type>NTAPP</type>
+    <volume>	
+      <ntappShare>
+        <name>C$</name>
+        <enabled>1</enabled>
+        <monitored>2</monitored> <!-- crawling method:0 disabled, 1 NTFS, 2 NFS, 3 = 1+2 -->
+      </ntappShare>
+      <ntappShare>
+        <name>D$</name>
+        <enabled>1</enabled>
+        <monitored>1</monitored> <!-- crawling method:0 disabled, 1 NTFS, 2 NFS, 3 = 1+2 -->
+      </ntappShare>
+      <ntappShare>
+        <name>E$</name>
+        <enabled>1</enabled>
+        <monitored>3</monitored> <!-- crawling method:0 disabled, 1 NTFS, 2 NFS, 3 = 1+2 -->
+      </ntappShare>
+    </volume>
+    <collectorname></collectorname>
+    <shareUserName>CI10\administrator</shareUserName>
+    <shareUserPass>p@ssword1</shareUserPass>
+  </filer>
+	
+</config>

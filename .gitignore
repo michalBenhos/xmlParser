@@ -1,0 +1,9 @@
+.vs/
+bin/
+obj/
+*.user
+*.userosscache
+*.suo
+*.userprefs
+*.ds_store
+*.vscode/

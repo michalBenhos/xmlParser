@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+<config testName="Config">
+  <setupComponents>
+    <installPlugins>
+      <plugin>
+        <name>UpdateDatabaseTraceAreas</name>
+        <enabled>1</enabled>
+      </plugin>
+      <plugin>
+        <name>DP-ShowHiddenCulture</name>
+        <enabled>1</enabled>
+      </plugin>
+      <pluginPost>
+        <name>UpdateDatabaseTraceAreasForIduServer</name>
+        <enabled>1</enabled>
+      </pluginPost>
+      <pluginPost>
+        <name>ChangeAppSettingsVaronisServer</name>
+        <enabled>1</enabled>
+        <argStr>DB_GENERAL_TIMEOUT|600|DB_FOR_UI_DEFAULT_TIMEOUT|600</argStr>
+      </pluginPost>
+    </installPlugins>
+    <component>
+      <name>DatAdvantage</name>
+      <enabled>1</enabled>
+      <type>iduModule</type>
+      <params>
+      </params>
+      <installNamePattern>*IDU Server*</installNamePattern>
+    </component>
+    <component>
+      <name>DAReports</name>
+      <enabled>0</enabled>
+      <type>iduModule</type>
+      <params>
+      </params>
+    </component>
+    <component>
+      <name>Classification</name>
+      <enabled>0</enabled>
+      <type>iduModule</type>
+      <params>
+      </params>
+      <installNamePattern>*Data Classification Engine*</installNamePattern>
+    </component>
+    <component>
+      <name>SecureMigration</name>
+      <enabled>0</enabled>
+      <type>iduModule</type>
+      <params>
+      </params>
+    </component>
+    <component>
+      <name>DataPrivilege</name>
+      <enabled>1</enabled>
+      <type>iduModule</type>
+      <params>
+      </params>
+      <installNamePattern>*DataPrivilege Searcher*</installNamePattern>
+      <installNamePattern>*DataPrivilege Services*</installNamePattern>
+      <installNamePattern>*DataPrivilege Web*</installNamePattern>
+    </component>
+    <component>
+      <name>DPReports</name>
+      <enabled>1</enabled>
+      <type>iduModule</type>
+      <params>
+      </params>
+    </component>
+    <component>
+      <name>SynchronizationService</name>
+      <enabled>1</enabled>
+      <type>iduModule</type>
+      <params>
+      </params>
+    </component>
+    <component>
+      <name>GUI</name>
+      <enabled>1</enabled>
+      <type>external</type>
+      <params>GUI\DatAdvantage.msi</params>
+      <installNamePattern>*DatAdvantage UI*</installNamePattern>
+    </component>
+    <component>
+      <name>ManagementConsole</name>
+      <enabled>1</enabled>
+      <type>external</type>
+      <params>Management Console\Varonis.ManagementConsole.Setup.msi</params>
+      <installNamePattern>*Management Console*</installNamePattern>
+    </component>
+    <component>
+      <name>BulkInsert</name>
+      <enabled>1</enabled>
+      <type>external</type>
+      <params>Tools\Bulk Upload\DataPrivilege.BulkInsert.Installer.msi</params>
+      <installNamePattern>*DataPrivilege Bulk Upload Utility*</installNamePattern>
+    </component>
+  </setupComponents>
+</config>

@@ -1,0 +1,180 @@
+<?xml version="1.0"?>
+<config testName="Config">
+
+  <setupComponents>
+
+    <component>
+      <name>DatAdvantage</name>
+      <enabled>1</enabled>
+      <type>iduModule</type>
+      <params>
+      </params>
+      <installNamePattern>*IDU Server*</installNamePattern>
+    </component>
+
+    <component>
+      <name>DAReports</name>
+      <enabled>0</enabled>
+      <type>iduModule</type>
+      <params>
+      </params>
+    </component>
+
+    <component>
+      <name>Classification</name>
+      <enabled>1</enabled>
+      <type>iduModule</type>
+      <params>
+      </params>
+      <installNamePattern>*Data Classification Engine*</installNamePattern>
+    </component>
+
+    <component>
+      <name>SecureMigration</name>
+      <enabled>0</enabled>
+      <type>iduModule</type>
+      <params>
+      </params>
+    </component>
+
+    <component>
+      <name>DataPrivilege</name>
+      <enabled>0</enabled>
+      <type>iduModule</type>
+      <params>
+      </params>
+      <installNamePattern>*DataPrivilege Searcher*</installNamePattern>
+      <installNamePattern>*DataPrivilege Services*</installNamePattern>
+      <installNamePattern>*DataPrivilege Web*</installNamePattern>
+    </component>
+
+    <component>
+      <name>DPReports</name>
+      <enabled>0</enabled>
+      <type>iduModule</type>
+      <params>
+      </params>
+    </component>
+
+    <component>
+      <name>SynchronizationService</name>
+      <enabled>0</enabled>
+      <type>iduModule</type>
+      <params>
+      </params>
+    </component>
+
+    <component>
+      <name>GUI</name>
+      <enabled>1</enabled>
+      <type>external</type>
+      <params>GUI\DatAdvantage.msi</params>
+      <installNamePattern>*DatAdvantage UI*</installNamePattern>
+    </component>
+
+    <component>
+      <name>ManagementConsole</name>
+      <enabled>1</enabled>
+      <type>external</type>
+      <params>Management Console\Varonis.ManagementConsole.Setup.msi</params>
+      <installNamePattern>*Management Console*</installNamePattern>
+    </component>
+
+    <component>
+      <name>DatAlert</name>
+      <enabled>1</enabled>
+      <type>iduModule</type>
+      <params></params>
+    </component>
+
+    <component>
+      <name>DatAlertAnalytics</name>
+      <enabled>1</enabled>
+      <type>iduModule</type>
+      <params>
+        <customKey>
+          <name>-dle-server</name>
+          <value>CI17-DV1</value>
+        </customKey>
+        <customKey>
+          <name>-dle-install-directory</name>
+          <value>"C:\Program Files\Varonis\DatAdvantage"</value>
+        </customKey>
+        <customKey>
+          <name>-dle-server-username</name>
+          <value>CI17\DLXUser</value>
+        </customKey>
+        <customKey>
+          <name>-dle-server-password</name>
+          <value>p@ssword1</value>
+        </customKey>
+        <customKey>
+          <name>-dle-port</name>
+          <value>8089</value>
+        </customKey>
+        <customKey>
+          <name>-dle-working-dir</name>
+          <value>C:\DLEShare</value>
+        </customKey>
+        <customKey>
+          <name>-dle-share</name>
+          <value>\\CI17-DV1\DLEShare</value>
+        </customKey>
+        <customKey>
+          <name>-dle-share-username</name>
+          <value>CI17\DLXUser</value>
+        </customKey>
+        <customKey>
+          <name>-dle-share-password</name>
+          <value>p@ssword1</value>
+        </customKey>
+        <customKey>
+          <name>-dle-protocol</name>
+          <value>http</value>
+        </customKey>
+      </params>
+    </component>
+
+    <component>
+      <name>DatAdvantageWeb</name>
+      <enabled>1</enabled>
+      <type>iduModule</type>
+      <params>
+        <customKey>
+          <name>-solr-host</name>
+          <value>CI17-DV1</value>
+        </customKey>
+        <customKey>
+          <name>-solr-user</name>
+          <value>CI17\Administrator</value>
+        </customKey>
+        <customKey>
+          <name>-solr-password</name>
+          <value>p@ssword1</value>
+        </customKey>
+        <customKey>
+          <name>-zookeeper-host</name>
+          <value>CI17-DV1</value>
+        </customKey>
+        <customKey>
+          <name>-zookeeper-user</name>
+          <value>CI17\Administrator</value>
+        </customKey>
+        <customKey>
+          <name>-zookeeper-password</name>
+          <value>p@ssword1</value>
+        </customKey>
+      </params>
+    </component>
+
+    <component>
+      <name>BulkInsert</name>
+      <enabled>0</enabled>
+      <type>external</type>
+      <params>Tools\Bulk Upload\DataPrivilege.BulkInsert.Installer.msi</params>
+      <installNamePattern>*DataPrivilege Bulk Upload Utility*</installNamePattern>
+    </component>
+
+  </setupComponents>
+
+</config>

@@ -1,0 +1,238 @@
+﻿<?xml version="1.0"?>
+<config>
+
+  <idu id="0">
+    <name>CI17-DV1</name>
+  </idu>
+
+  <configPlugins>
+
+  </configPlugins>
+
+  <svnFolders>
+
+  </svnFolders>
+
+  <domain id="0">
+    <enabled>1</enabled>
+    <type>AD</type>
+    <name>CI17.com</name>
+    <domainAdminUserName>CI17\Administrator</domainAdminUserName>
+    <domainAdminUserPass>p@ssword1</domainAdminUserPass>
+    <collectEvents>1</collectEvents>
+  </domain>
+
+  <filer id="1">
+    <enabled>1</enabled>
+    <name>CI17-DV1</name>
+    <type>WIN</type>
+    <volume>C$</volume>
+    <collectorName></collectorName>
+    <probeName>CI17-DV1</probeName>
+    <shareUserName>CI17\Administrator</shareUserName>
+    <shareUserPass>p@ssword1</shareUserPass>
+
+    <filerOptions>
+
+      <filerConfig>
+        <enabled>1</enabled>
+        <type>All</type>
+        <name>CollectLocalAccountsInfo</name>
+        <value>$true</value>
+      </filerConfig>
+
+      <filerConfig>
+        <enabled>1</enabled>
+        <type>All</type>
+        <name>AddedToFilteredUsers</name>
+        <value>$true</value>
+      </filerConfig>
+
+      <filerConfig>
+        <enabled>0</enabled>
+        <type>All</type>
+        <name>IsFwIncEnabled </name>
+        <value>$false</value>
+      </filerConfig>
+
+    </filerOptions>
+
+  </filer>
+  <filer id="2">
+    <enabled>1</enabled>
+    <name>CI17-Filer2K8</name>
+    <type>WIN</type>
+    <volume>C$</volume>
+    <collectorName></collectorName>
+    <probeName>CI17-DV1</probeName>
+    <shareUserName>CI17\Administrator</shareUserName>
+    <shareUserPass>p@ssword1</shareUserPass>
+
+    <filerOptions>
+
+      <filerConfig>
+        <enabled>1</enabled>
+        <type>All</type>
+        <name>CollectLocalAccountsInfo</name>
+        <value>$true</value>
+      </filerConfig>
+
+      <filerConfig>
+        <enabled>1</enabled>
+        <type>All</type>
+        <name>AddedToFilteredUsers</name>
+        <value>$true</value>
+      </filerConfig>
+
+      <filerConfig>
+        <enabled>0</enabled>
+        <type>All</type>
+        <name>IsFwIncEnabled </name>
+        <value>$false</value>
+      </filerConfig>
+
+    </filerOptions>
+  </filer>
+  <filer id="3">
+    <enabled>1</enabled>
+    <name>CI17-DC1</name>
+    <type>WIN</type>
+    <volume>C$</volume>
+    <shareUserName>CI17\Administrator</shareUserName>
+    <shareUserPass>p@ssword1</shareUserPass>
+
+    <filerOptions>
+      <filerConfig>
+        <enabled>1</enabled>
+        <type>All</type>
+        <name>CollectLocalAccountsInfo</name>
+        <value>$true</value>
+      </filerConfig>
+    </filerOptions>
+  </filer>
+
+  <filer id="4">
+    <enabled>1</enabled>
+    <name>CI17-FS1</name>
+    <type>WIN</type>
+    <volume>C$</volume>
+    <shareUserName>CI17\Administrator</shareUserName>
+    <shareUserPass>p@ssword1</shareUserPass>
+
+    <filerOptions>
+      <filerConfig>
+        <enabled>1</enabled>
+        <type>All</type>
+        <name>CollectLocalAccountsInfo</name>
+        <value>$true</value>
+      </filerConfig>
+    </filerOptions>
+  </filer>
+
+  <filer id="5">
+    <enabled>1</enabled>
+    <name>CI17-SP10</name>
+    <type>WIN</type>
+    <volume>C$</volume>
+    <shareUserName>CI17\Administrator</shareUserName>
+    <shareUserPass>p@ssword1</shareUserPass>
+
+    <filerOptions>
+      <filerConfig>
+        <enabled>1</enabled>
+        <type>All</type>
+        <name>CollectLocalAccountsInfo</name>
+        <value>$true</value>
+      </filerConfig>
+    </filerOptions>
+  </filer>
+
+  <filer id="6">
+    <enabled>1</enabled>
+    <name>CI17-XC10.CI17.COM</name>
+    <!--FQDN IS A MUST-->
+    <type>EXCH</type>
+    <shareUserName>CI17\Administrator</shareUserName>
+    <shareUserPass>p@ssword1</shareUserPass>
+    <volume>
+      <exchDomain>
+        <enabled>1</enabled>
+        <isPublicFolder>0</isPublicFolder>
+        <name>CI17.COM</name>
+      </exchDomain>
+      <exchDomain>
+        <enabled>1</enabled>
+        <isPublicFolder>1</isPublicFolder>
+        <name>CI17.COM</name>
+      </exchDomain>
+    </volume>
+    <filerOptions>
+      <supportAdditionalProtocols>
+        <enabled>1</enabled>
+      </supportAdditionalProtocols>
+      <filerConfig>
+        <enabled>1</enabled>
+        <type>Exchange</type>
+        <name>EX_SupportAdditionalProtocols</name>
+        <value>$true</value>
+      </filerConfig>
+      <filerConfig>
+        <enabled>1</enabled>
+        <type>Exchange</type>
+        <name>EX_Reconnect_Method</name>
+        <value>0</value>
+      </filerConfig>
+      <monitorFilerAsMailboxServer>
+        <enabled>1</enabled>
+      </monitorFilerAsMailboxServer>
+
+      <filerConfig>
+        <enabled>1</enabled>
+        <skipIfPropMissing>1</skipIfPropMissing>
+        <type>Exchange</type>
+        <name>EX_AgentType</name>
+        <value>"GaAgentOnly"</value>
+        <!-- MixedAgents GaAgentOnly BetaAgentOnly -->
+      </filerConfig>
+
+    </filerOptions>
+  </filer>
+
+ <filer id="7">
+    <enabled>1</enabled>
+    <name>CI17-SP13</name>
+    <type>WIN</type>
+    <volume>C$</volume>
+    <shareUserName>CI17\Administrator</shareUserName>
+    <shareUserPass>p@ssword1</shareUserPass>
+
+    <filerOptions>
+      <filerConfig>
+        <enabled>1</enabled>
+        <type>All</type>
+        <name>CollectLocalAccountsInfo</name>
+        <value>$true</value>
+      </filerConfig>
+    </filerOptions>
+  </filer>
+
+  <filer id="8">
+    <enabled>1</enabled>
+    <name>CI17-FS2</name>
+    <type>WIN</type>
+    <volume>C$</volume>
+    <shareUserName>CI17\Administrator</shareUserName>
+    <shareUserPass>p@ssword1</shareUserPass>
+
+    <filerOptions>
+      <filerConfig>
+        <enabled>1</enabled>
+        <type>All</type>
+        <name>CollectLocalAccountsInfo</name>
+        <value>$true</value>
+      </filerConfig>
+    </filerOptions>
+  </filer>
+
+
+</config>
