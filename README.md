@@ -2,7 +2,7 @@
 
 ## Overview
 
-This C# console application that parses `labConfig.xml` files to extract data related to domains, collectors, and filers. 
+This C# console application parses `labConfig.xml` files to extract data related to domains, collectors, and filers. 
 Each file's data is represented by a `LabConfigData` object, and the application prints a summary table to the console, 
 displaying the information for each file and a total summary for all files processed.
 
