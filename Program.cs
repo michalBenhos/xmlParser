@@ -12,7 +12,7 @@ namespace parseXmlFiles
         /// </summary>
         static void Main(string[] args)
         {
-            string path = @"C:\Users\Infinity\Desktop\michal\xmlParser";
+            string path = @".\ParseXML";
             var xmlParser = new XMLParser();
             xmlParser.ParseDirectory(path);
             xmlParser.PrintData();
