@@ -27,7 +27,7 @@ displaying the information for each file and a total summary for all files proce
 3. Execute the following command to run the application:
 
 ```shell
-dotnet build
+
 dotnet run
 ```
 
