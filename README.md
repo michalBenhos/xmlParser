@@ -20,15 +20,16 @@ displaying the information for each file and a total summary for all files proce
 ```shell
 dotnet build
 dotnet run
+```
 
 
-Application Structure:
+### Application Structure
 
 - LabConfigData: A class that represents the data structure for the lab configuration data.
 - XMLParser: A class that handles the parsing of XML files and stores the extracted data.
 - Program: The entry point of the application, which sets up the XMLParser, triggers parsing, and prints out the data.
 
-Features:
+### Features
 
 - Parses labConfig.xml files in a given directory and all its subdirectories.
 - Extracts data regarding domain counts, collector counts, and filer counts.
