@@ -1,0 +1,16 @@
+<Main>
+  <Feature Name="License">
+    <Operation Name="mail" Value="skazanovich@varonis.com" />
+    <Operation Name="serial" Value="51d7-f7ff-01af-4fbd" />
+    <Operation Name="key" Value="AYAAAABZ8d15wK9np9RkosW07lPFHNu351XR353gOn+MIZZ3UXlPHpwhpzBbaixdsBW9wq6bLDssoPVTYIbfGd/6iBaNbBBlyRXpuc+JPeCTXimmGTc896xUd943+ScQKcbHnNVFZqxo8jyhMt+F9NCpPq4/rBpaCoQlNkFWOezZDO2tdAr2AQgAEvEBChAIARIMCP//AxIECKzMBBgeChAIAhIMCP//AxIECKzMBBgeChAIAxIMCP//AxIECKzMBBgeCgsIBBIHEgMIknIYHgoQCAUSDAj//wMSBAiszAQYHgoLCAYSBxIDCJJyGB4KCwgIEgcSAwiSchgeChAIBxIMCP//AxIECKzMBBgeMg4IARIKCP//AxIECKzMBDIOCAQSCgj//wMSBAiszAQyDggCEgoI//8DEgQIrMwEMg4IAxIKCP//AxIECKzMBDIOCAYSCgj//wMSBAiszAQyDggAEgoI//8DEgQIrMwEMg4IBRIKCP//AxIECKzMBApUCAISUAoQCAESDAj//wMSBAiszAQYHgoQCAISDAj//wMSBAiszAQYHgoQCAMSDAj//wMSBAiszAQYHgoLCAQSBxIDCJJyGB4KCwgIEgcSAwiSchgeCnIIARJuCgsIARIHEgMIknIYHgoLCAMSBxIDCJJyGB4KCwgEEgcSAwiSchgeCgsICBIHEgMIknIYHhoYCAESFAgBGgwIChgBIgZTaW5nbGUwCjgBGh4IABIaCAgQ//8DGhAIChADGAQiCFRob3VzYW5kOAEKPAgEEjgKDwgBEgsI//8DEgMIknIYHgoLCAISBxIDCJJyGB4KCwgDEgcSAwiSchgeCgsIBRIHEgMIknIYHgorCAMSJwoOCAASCgj//wMSBAiszAQaFQgAEhEQMhoLCIAIEAEYASICR0I4AwoPCAUSCwoJCAASBRIDCJJyCg8ICBILCgkIABIFEgMIknIaBAjIhQJyHAgBEhgIARD//wMaDAgKGAEiBlNpbmdsZSAAMAVyGQgAEhUQ//8DGgsIgAgQAhgCIgJUQiABMAVyCggCEgYIAhD//wNyBggDEgIIA3IKCAQSBggEEP//A3IKCAUSBggFEP//A3IKCAYSBggGEP//A3IGCAcSAggHehdza2F6YW5vdmljaEB2YXJvbmlzLmNvbYoBEzUxZDctZjdmZi0wMWFmLTRmYmSQAQ4=" />
+  </Feature>
+  <Feature Name="mail">
+    <Operation Name="from" Value="CI11@qa.varonis.com" />
+    <Operation Name="to" Value="labs@qa.varonis.com" />
+    <Operation Name="smtp" Value="labmail.varonis.com" />
+  </Feature>
+  <Feature Name="db">
+    <Operation Name="user" Value="sa-lab" />
+    <Operation Name="pwd" Value="p@ssword1" />
+  </Feature>
+</Main>

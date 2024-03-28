@@ -1,0 +1,47 @@
+﻿<?xml version="1.0"?>
+<config testName="Config">
+
+	<idu id="0">
+		<name>CI15-DV1</name>
+	</idu>
+	
+	<svnFolders>
+		<svnUpdate>C:\AutomaticTester\Tests\DP</svnUpdate>
+		<svnUpdate>C:\AutomaticTester\Tests\Synchronization</svnUpdate>
+	</svnFolders>
+	
+	<configPlugins>
+		<pluginAfterConfig>
+			<name>DisableDaJobs</name>
+			<enabled>1</enabled>
+		</pluginAfterConfig>
+	</configPlugins>
+	
+	<domain id="1">
+		 <enabled>1</enabled>
+		 <type>AD</type>
+		 <name>CI15.com</name>
+		 <domainAdminUserName>CI15\administrator</domainAdminUserName>
+		 <domainAdminUserPass>p@ssword1</domainAdminUserPass>
+	</domain>
+	 
+	<filer id="2">
+		<enabled>1</enabled>
+		<name>CI15-Filer2K8</name>
+		<type>WIN</type>
+		<volume>C$</volume>
+		<collectorname></collectorname>
+		<shareUserName>CI15\administrator</shareUserName>
+		<shareUserPass>p@ssword1</shareUserPass>
+		<filerOptions>
+            <filerConfig>
+                <enabled>1</enabled>
+                <type>All</type>
+                <name>CollectLocalAccountsInfo</name>
+                <value>$true</value>
+            </filerConfig>
+        </filerOptions>
+
+	</filer>
+	
+</config>

@@ -1,0 +1,44 @@
+﻿<?xml version="1.0"?>
+<config testName="Config">
+	
+	<svnFolders>
+		<svnUpdate>C:\AutomaticTester\Tests\Editing\Scripts</svnUpdate>
+		<svnUpdate>C:\AutomaticTester\Tests\Editing_new\Scripts</svnUpdate>
+		<svnUpdate>C:\AutomaticTester\Tests\Editing\GUI\Windows</svnUpdate>
+		<svnUpdate>C:\AutomaticTester\Tests\Editing_new\GUI\Windows</svnUpdate>
+		<svnUpdate>C:\AutomaticTester\Masters\Default\Editing\GUI\Windows</svnUpdate>
+		<svnUpdate>C:\AutomaticTester\Masters\Default\Editing_new\GUI</svnUpdate>
+		<svnUpdate>C:\UIAutomation</svnUpdate>
+	</svnFolders>
+	
+	<idu id="0">
+		<name>CI16-DV1</name>
+	</idu>
+	
+	<configPlugins>
+		<pluginAfterConfig>
+			<name>DisableDaJobs</name>
+			<enabled>1</enabled>
+		</pluginAfterConfig>
+	</configPlugins>
+	
+	<domain id="1">
+		 <enabled>1</enabled>
+		 <type>AD</type>
+		 <name>CI16.com</name>
+		 <domainAdminUserName>CI16\administrator</domainAdminUserName>
+		 <domainAdminUserPass>p@ssword1</domainAdminUserPass>
+	</domain>
+	 
+	<filer id="2">
+		<enabled>1</enabled>
+		<name>CI16-DV2</name>
+		<type>WIN</type>
+		<volume>C$</volume>
+		<collectorname></collectorname>
+		<shareUserName>CI16\administrator</shareUserName>
+		<shareUserPass>p@ssword1</shareUserPass>
+	</filer>
+	
+	
+</config>

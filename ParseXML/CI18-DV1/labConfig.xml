@@ -1,0 +1,50 @@
+﻿<?xml version="1.0"?>
+<config testName="Config">
+
+	<automaticTester>
+		<enabled>0</enabled>
+		<testPath>c:\AutomaticTester\Tests\MC\Domains\Domains - Automation.xml</testPath>
+		<run>0</run>
+		<connectionString>data source=CI18-DV1\R2;initial catalog=vrnsDomainDB;UID=sa-lab;PWD=p@ssword1</connectionString>
+	</automaticTester>
+	
+	<svnFolders>
+		<svnUpdate>C:\AutomaticTester\Tests\Editing\Scripts</svnUpdate>
+		<svnUpdate>C:\AutomaticTester\Tests\Editing_new\Scripts</svnUpdate>
+		<svnUpdate>C:\AutomaticTester\Tests\Editing\GUI\Windows</svnUpdate>
+		<svnUpdate>C:\AutomaticTester\Tests\Editing_new\GUI\Windows</svnUpdate>
+		<svnUpdate>C:\AutomaticTester\Masters\Default\Editing\GUI\Windows</svnUpdate>
+		<svnUpdate>C:\AutomaticTester\Masters\Default\Editing_new\GUI</svnUpdate>
+		<svnUpdate>C:\UIAutomation</svnUpdate>
+	</svnFolders>
+	
+	<idu id="0">
+		<name>CI18-DV1</name>
+	</idu>
+	
+	<configPlugins>
+		<pluginAfterConfig>
+			<name>DisableDaJobs</name>
+			<enabled>1</enabled>
+		</pluginAfterConfig>
+	</configPlugins>
+	
+	<domain id="1">
+		 <enabled>1</enabled>
+		 <type>AD</type>
+		 <name>CI18.com</name>
+		 <domainAdminUserName>CI18\administrator</domainAdminUserName>
+		 <domainAdminUserPass>p@ssword1</domainAdminUserPass>
+	</domain>
+	 
+	<filer id="2">
+		<enabled>1</enabled>
+		<name>CI18-Filer2K8</name>
+		<type>WIN</type>
+		<volume>C$</volume>
+		<collectorname></collectorname>
+		<shareUserName>CI18\administrator</shareUserName>
+		<shareUserPass>p@ssword1</shareUserPass>
+	</filer>
+	
+</config>
