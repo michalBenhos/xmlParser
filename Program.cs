@@ -10,12 +10,12 @@ namespace parseXmlFiles
         /// <summary>
         /// The main method that starts the application.
         /// </summary>
-        static void Main(string[] args)
+        static void Main()
         {
-            string path = @".\ParseXML";
-            var xmlParser = new XMLParser();
-            xmlParser.ParseDirectory(path);
-            xmlParser.PrintData();
+            string path = @"ParseXML";
+            List<LabConfigData> labConfigDatas = XMLParser.ParseDirectory(path);
+            DataPrinter dataPrinter = new();
+            dataPrinter.PrintData(labConfigDatas);
         }
     }
 }

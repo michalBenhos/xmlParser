@@ -16,7 +16,7 @@ namespace parseXmlFiles
         public LabConfigData(string path)
         {
             Path = path ?? throw new ArgumentNullException(nameof(path), "Path cannot be null");
-            DomainNames = new List<string>();
+            DomainNames = new();
         }
         public string Path { get; set; }
         public int DomainCount { get; set; }
@@ -24,5 +24,4 @@ namespace parseXmlFiles
         public int CollectorCount { get; set; }
         public List<string> DomainNames { get; set; }
     }
-
 }
